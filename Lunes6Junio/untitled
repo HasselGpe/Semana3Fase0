@@ -1,0 +1,28 @@
+class Dog
+  def initialize(name, color)
+   @name = name #Variable de instancia 1
+   @color = color #Variable de instancia 2
+  end
+
+  def show_name
+    @name
+  end
+
+  def change_color(new_color)
+    @color = new_color
+  end
+
+  def self.bark
+    @@bark
+    puts "GUA Gua GUA"
+  end
+end
+
+#instancias de Dog
+dog1 = Dog.new("c", "rojo")
+dog2 = Dog.new("b", "verde")
+
+p dog1.show_name == "c"
+#metodo de clase
+p Dog.bark == "GUA Gua GUA"
+p Dog.bark == "GUA Gua "
